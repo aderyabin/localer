@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+
+require "pry"
+require "thor"
+require_relative "../lib/localer"
+
+module Localer
+  class CLI < Thor
+    desc "version", "Print Localer version"
+    def version
+      say Localer::VERSION
+    end
+
+    desc "check", "Check I18n complete"
+    def check
+      if Localer.complete?
+        say "\xE2\x9C\x94 No missing translations found.", :green
+      else
+        missing_translations = Localer.missing_translations
+        say "\xE2\x9C\x96 Missing translations found (#{missing_translations.count}):", :red
+        missing_translations.each do |tr|
+          say "* #{tr}"
+        end
+
+        exit 1
+      end
+    end
+
+    desc "console", "Run console"
+    def console
+      binding.pry
+    end
+  end
+end
+
+
+Localer::CLI.start(ARGV)
