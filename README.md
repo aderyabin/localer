@@ -1,5 +1,8 @@
 # Localer
 
+[![Build Status](https://travis-ci.org/aderyabin/localer.svg?branch=master)](https://travis-ci.org/aderyabin/localer) [![Gem Version](https://badge.fury.io/rb/localer.svg)](https://rubygems.org/gems/localer)
+
+
 Automatic detecting missing I18n translations tool.
 
 
