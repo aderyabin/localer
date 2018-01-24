@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require "pry"
 require "thor"
+require "irb"
 require_relative "../lib/localer"
 
 module Localer
@@ -28,7 +28,8 @@ module Localer
 
     desc "console", "Run console"
     def console
-      binding.pry
+      ARGV.clear
+      IRB.start
     end
   end
 end
