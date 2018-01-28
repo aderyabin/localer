@@ -6,6 +6,7 @@ AllCops:
     - 'spec/**/*.rb'
   Exclude:
     - 'bin/**/*'
+    - 'Appraisals'
     - 'Gemfile'
     - 'Rakefile'
     - '*.gemspec'
