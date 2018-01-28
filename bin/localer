@@ -11,12 +11,16 @@ module Localer
       say Localer::VERSION
     end
 
-    desc "check", "Check I18n complete"
-    def check
-      if Localer.complete?
+    desc "check [/path/to/rails/application]", "Check missing translations"
+    def check(app_path = Localer::Config::APP_PATH)
+      Localer.configure(options.dup.merge(app_path: app_path))
+
+      connect_to_rails
+
+      if Localer.data.complete?
         say "\xE2\x9C\x94 No missing translations found.", :green
       else
-        missing_translations = Localer.missing_translations
+        missing_translations = Localer.data.missing_translations
         say "\xE2\x9C\x96 Missing translations found (#{missing_translations.count}):", :red
         missing_translations.each do |tr|
           say "* #{tr}"
@@ -26,10 +30,14 @@ module Localer
       end
     end
 
-    desc "console", "Run console"
-    def console
-      ARGV.clear
-      IRB.start
+    default_task :check
+
+    private
+
+    def connect_to_rails
+      return if Localer::Rails.connect!
+      say "No Rails application found"
+      exit 1
     end
   end
 end
