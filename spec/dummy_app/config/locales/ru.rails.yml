@@ -1,0 +1,129 @@
+ru:
+  date:
+    abbr_day_names:
+      -
+    abbr_month_names:
+      -
+    day_names:
+      -
+    month_names:
+      -
+    order:
+      -
+    formats:
+      default: "%d.%m.%Y"
+      long: "%-d %B %Y"
+      short: "%-d %b"
+  time:
+    am: утра
+    formats:
+      default: "%a, %d %b %Y, %H:%M:%S %z"
+      long: "%d %B %Y, %H:%M"
+      short: "%d %b, %H:%M"
+    pm: вечера
+  datetime:
+    prompts:
+      day: День
+      hour: Часов
+      minute: Минут
+      month: Месяц
+      second: Секунд
+      year: Год
+    distance_in_words:
+      about_x_hours:
+        one: около %{count} часа
+        other: около %{count} часа
+      about_x_months:
+        one: около %{count} месяца
+        other: около %{count} месяца
+      about_x_years:
+        one: около %{count} года
+        other: около %{count} лет
+      almost_x_years:
+        one: почти %{count} год
+        other: почти %{count} лет
+      half_a_minute: меньше минуты
+      less_than_x_minutes:
+        one: меньше %{count} минуты
+        other: меньше %{count} минуты
+      less_than_x_seconds:
+        one: меньше %{count} секунды
+        other: меньше %{count} секунды
+      over_x_years:
+        one: больше %{count} года
+        other: больше %{count} лет
+      x_days:
+        one: "%{count} день"
+        other: "%{count} дня"
+      x_minutes:
+        one: "%{count} минуту"
+        other: "%{count} минуты"
+      x_months:
+        one: "%{count} месяц"
+        other: "%{count} месяца"
+      x_seconds:
+        one: "%{count} секунду"
+        other: "%{count} секунды"
+  number:
+    precision:
+      format:
+        delimiter: ''
+    format:
+      delimiter: " "
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n%"
+    human:
+      format:
+        delimiter: ''
+        precision: 1
+        significant: false
+        strip_insignificant_zeros: false
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ''
+          billion: миллиард
+          million: миллион
+          quadrillion: квадриллион
+          thousand: тысяча
+          trillion: триллион
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: байт
+            other: байта
+          gb: ГБ
+          kb: КБ
+          mb: МБ
+          tb: ТБ
+          pb: ""
+          eb: ""
+
+    currency:
+      format:
+        delimiter: " "
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: руб.
+  helpers:
+    select:
+      prompt: 'Выберите: '
+    submit:
+      create: Создать %{model}
+      submit: Сохранить %{model}
+      update: Сохранить %{model}
+  support:
+    array:
+      last_word_connector: " и "
+      two_words_connector: " и "
+      words_connector: ", "
