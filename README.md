@@ -1,13 +1,21 @@
-# Localer
-
 [![Build Status](https://travis-ci.org/aderyabin/localer.svg?branch=master)](https://travis-ci.org/aderyabin/localer) [![Gem Version](https://badge.fury.io/rb/localer.svg)](https://rubygems.org/gems/localer)
 
-<img align="center" height="500" src="https://gist.githubusercontent.com/aderyabin/cb0512cbcd6cb4c79a4d84a4831109a5/raw/localer2.png">
+# Localer
+Localer is an automatic detecting missing I18n translations tool.
 
-Automatic detecting missing I18n translations tool.
+The aim is to preserve the integrity of translations.
+Localer parses and merges keys for all locales in an application. At the next step, it searches missed translations for calculated keys.
 
-<a href="https://evilmartians.com/">
-<img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg" alt="Sponsored by Evil Martians" width="236" height="54"></a>
+<p align="center">
+  <img align="center" height="500" src="https://gist.githubusercontent.com/aderyabin/cb0512cbcd6cb4c79a4d84a4831109a5/raw/localer2.png">
+</p>
+
+<p align="center">
+  <a href="https://evilmartians.com/?utm_source=localer">
+    <img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg"
+         alt="Sponsored by Evil Martians" width="236" height="54">
+  </a>
+</p>
 
 
 ## Installation
