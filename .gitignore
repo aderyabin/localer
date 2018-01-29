@@ -12,3 +12,4 @@ erl_crash.dump
 .ruby-version
 .vscode
 spec/dummy_app/log/
+vendor/

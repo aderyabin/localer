@@ -1,5 +1,21 @@
 sudo: false
+dist: trusty
 language: ruby
+
+before_install:
+  - gem install bundler
 rvm:
+  - 2.3.3
   - 2.4.3
-before_install: gem install bundler -v 1.16.0
+  - 2.5.0
+gemfile:
+  - gemfiles/rails50.gemfile
+  - gemfiles/rails51.gemfile
+matrix:
+  include:
+    - rvm: 2.5.0
+      env: RUBOCOP=true
+    - rvm: 2.3.3
+      gemfile: gemfiles/rails40.gemfile
+    - rvm: 2.3.3
+      gemfile: gemfiles/rails41.gemfile

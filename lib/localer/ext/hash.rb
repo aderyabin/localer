@@ -25,16 +25,6 @@ module Localer
           dup.deep_merge!(other_hash, &block)
         end
 
-        def deep_symbolize_keys!
-          deep_transform_keys! do |key|
-            begin
-              key.to_sym
-            rescue StandardError
-              key
-            end
-          end
-        end
-
         def deep_symbolize_keys
           deep_transform_keys do |key|
             begin

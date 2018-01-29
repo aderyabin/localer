@@ -11,6 +11,8 @@ AllCops:
     - 'Gemfile'
     - 'Rakefile'
     - '*.gemspec'
+    - 'gemfiles/vendor/**/*'
+    - 'vendor/**/*'
   DisplayCopNames: true
   StyleGuideCopsOnly: false
   TargetRubyVersion: 2.4
