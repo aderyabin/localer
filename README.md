@@ -1,15 +1,19 @@
+
+<p align="left">
+<img title="Localer logo" width="384" height="100" src="https://gist.githubusercontent.com/aderyabin/cb0512cbcd6cb4c79a4d84a4831109a5/raw/localer-logo.png">
+</p>
+
 [![Build Status](https://travis-ci.org/aderyabin/localer.svg?branch=master)](https://travis-ci.org/aderyabin/localer) [![Gem Version](https://badge.fury.io/rb/localer.svg)](https://rubygems.org/gems/localer)
 
-# Localer
 Localer is a tool that automatically detects missing I18n translations.
 
 The goal is to preserve the integrity of translations. Localer parses and merges all  application locales’ keys. At the next step, it searches for missing translations among the calculated keys.
 
-<p align="center">
-  <img align="center" height="500" src="https://gist.githubusercontent.com/aderyabin/cb0512cbcd6cb4c79a4d84a4831109a5/raw/localer2.png">
+<p align="left">
+  <img height="500" src="https://gist.githubusercontent.com/aderyabin/cb0512cbcd6cb4c79a4d84a4831109a5/raw/localer2.png">
 </p>
 
-<p align="center">
+<p align="left">
   <a href="https://evilmartians.com/?utm_source=localer">
     <img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg"
          alt="Sponsored by Evil Martians" width="236" height="54">
@@ -80,7 +84,7 @@ Locale:
 
 ## Using Rake
 
-Localer ships with a rake task. To use Localers's rake task you simply need to require the task file and define a task with it. Below is a rake task that will run `localer`:
+Localer ships with a rake task. To use Localer's rake task you simply need to require the task file and define a task with it. Below is a rake task that will run `localer`:
 
 ```ruby
 require 'rubygems'
@@ -99,8 +103,6 @@ you should see
 ```
 rake localer  # Run Localer
 ```
-
-####
 
 ## Development
 
