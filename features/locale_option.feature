@@ -10,6 +10,17 @@ Scenario: Disable en locale
   When I run checker
   Then the checker should pass
 
+Scenario: Disable case-insensitive EN locale
+  Given a real locales
+  Given a config file with:
+  """
+  Locale:
+    EN:
+      Enabled: false
+  """
+  When I run checker
+  Then the checker should pass
+
 Scenario: Disable en.population
   Given a real locales
   Given a config file with:
