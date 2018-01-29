@@ -1,10 +1,9 @@
 [![Build Status](https://travis-ci.org/aderyabin/localer.svg?branch=master)](https://travis-ci.org/aderyabin/localer) [![Gem Version](https://badge.fury.io/rb/localer.svg)](https://rubygems.org/gems/localer)
 
 # Localer
-Localer is an automatic detecting missing I18n translations tool.
+Localer is a tool that automatically detects missing I18n translations.
 
-The aim is to preserve the integrity of translations.
-Localer parses and merges keys for all locales in an application. At the next step, it searches missed translations for calculated keys.
+The goal is to preserve the integrity of translations. Localer parses and merges all  application locales’ keys. At the next step, it searches for missing translations among the calculated keys.
 
 <p align="center">
   <img align="center" height="500" src="https://gist.githubusercontent.com/aderyabin/cb0512cbcd6cb4c79a4d84a4831109a5/raw/localer2.png">
@@ -16,7 +15,6 @@ Localer parses and merges keys for all locales in an application. At the next st
          alt="Sponsored by Evil Martians" width="236" height="54">
   </a>
 </p>
-
 
 ## Installation
 
@@ -37,13 +35,13 @@ Or install it yourself as:
 ## Usage
 
 At the root directory of a Rails app, run:
-```
-localer check .
-```
+
+    $ localer check .
+
 or for specific Rails path:
-```
-localer check /path/to/rails/application
-```
+
+    $ localer check /path/to/rails/application
+
 ## Support
 
 Localer supports Ruby 2.3+, Rails. 4.1+
@@ -79,6 +77,30 @@ Locale:
       - /population\z/
       - .countries.france
 ```
+
+## Using Rake
+
+Localer ships with a rake task. To use Localers's rake task you simply need to require the task file and define a task with it. Below is a rake task that will run `localer`:
+
+```ruby
+require 'rubygems'
+require 'localer'
+require 'localer/rake_task'
+
+Localer::RakeTask.new(:localer)
+```
+
+When you now run:
+
+    $ rake -T
+
+you should see
+
+```
+rake localer  # Run Localer
+```
+
+####
 
 ## Development
 
