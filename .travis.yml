@@ -3,7 +3,7 @@ dist: trusty
 language: ruby
 
 before_install:
-  - gem install bundler
+  - gem install bundler --version '1.16.0'
 rvm:
   - 2.3.3
   - 2.4.3
@@ -16,6 +16,6 @@ matrix:
     - rvm: 2.5.0
       env: RUBOCOP=true
     - rvm: 2.3.3
-      gemfile: gemfiles/rails40.gemfile
-    - rvm: 2.3.3
       gemfile: gemfiles/rails41.gemfile
+    - rvm: 2.3.3
+      gemfile: gemfiles/rails42.gemfile
