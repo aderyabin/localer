@@ -3,7 +3,7 @@
 <img title="Localer logo" width="384" height="100" src="https://gist.githubusercontent.com/aderyabin/cb0512cbcd6cb4c79a4d84a4831109a5/raw/localer-logo.png">
 </p>
 
-[![Build Status](https://travis-ci.org/aderyabin/localer.svg?branch=master)](https://travis-ci.org/aderyabin/localer) [![Gem Version](https://badge.fury.io/rb/localer.svg)](https://rubygems.org/gems/localer)
+[![Gem Version](https://badge.fury.io/rb/localer.svg)](https://rubygems.org/gems/localer) [![Build Status](https://travis-ci.org/aderyabin/localer.svg?branch=master)](https://travis-ci.org/aderyabin/localer) ![Dependency Status](https://gemnasium.com/badges/github.com/aderyabin/localer.svg)
 
 Localer is a tool that automatically detects missing I18n translations.
 
