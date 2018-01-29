@@ -5,7 +5,6 @@
 
 Automatic detecting missing I18n translations tool.
 
-
 <a href="https://evilmartians.com/">
 <img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg" alt="Sponsored by Evil Martians" width="236" height="54"></a>
 
@@ -26,11 +25,67 @@ Or install it yourself as:
 
     $ gem install localer
 
+## Usage
+
+At the root directory of a Rails app, run:
+```
+localer check .
+```
+or for specific Rails path:
+```
+localer check /path/to/rails/application
+```
+## Supported Ruby/Rails versions
+
+Localer is supported for the following versions:
+
+|          | Rails 4.1 | Rails 4.2 | Rails 5.0 | Rails 5.1 |
+|----------|:---------:|:---------:|:---------:|:---------:|
+| Ruby 2.3 |     +     |     +     |     +     |     +     |
+| Ruby 2.4 |     -     |     -     |     +     |     +     |
+| Ruby 2.5 |     -     |     -     |     +     |     +     |
+
+## Configuration
+
+The behavior of Localer can be controlled via the `.localer.yml` configuration file. It makes it possible to disable locales and keys. The file can be placed in your project directory.
+
+#### Disable specific locale
+
+By default, Localer enables all locales, but you can disable it:
+
+```yml
+Locale:
+  EN:
+    Enabled: false
+```
+
+#### Exclude keys globally
+By default, Localer enables all keys, but you can disable keys started with specified string or by regex:
+
+```yml
+Exclude:
+  - /population\z/
+  - .countries.france
+```
+
+#### Exclude keys for specific locale
+```yml
+Locale:
+  EN:
+    Exclude:
+      - /population\z/
+      - .countries.france
+```
+
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bundle exec appraisal install` to install dependencies for each appraisal. Then, run `bundle exec appraisal rake` to run the tests.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+## Built With
+
+* [Thor](https://github.com/erikhuda/thor) - Used for building  command-line interfaces.
+* [Appraisal](https://github.com/thoughtbot/appraisal) -  Used for testing against different versions of dependencies
+* [Cucumber](https://github.com/cucumber/cucumber) + [Aruba](https://github.com/cucumber/aruba) - Used for testing command-line commands
 
 ## Contributing
 
