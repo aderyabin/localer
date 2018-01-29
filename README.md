@@ -36,15 +36,9 @@ or for specific Rails path:
 ```
 localer check /path/to/rails/application
 ```
-## Supported Ruby/Rails versions
+## Support
 
-Localer is supported for the following versions:
-
-|          | Rails 4.1 | Rails 4.2 | Rails 5.0 | Rails 5.1 |
-|----------|:---------:|:---------:|:---------:|:---------:|
-| Ruby 2.3 |     +     |     +     |     +     |     +     |
-| Ruby 2.4 |     -     |     -     |     +     |     +     |
-| Ruby 2.5 |     -     |     -     |     +     |     +     |
+Localer supports Ruby 2.3+, Rails. 4.1+
 
 ## Configuration
 
