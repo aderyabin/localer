@@ -46,49 +46,6 @@ or for specific Rails path:
 
     $ localer check /path/to/rails/application
 
-progapandist [3:32 PM]
-А, ну тогда если ты не планируешь это делать частью гема и это ваша IP, то можно и не писать про админку
-Иначе это будет немного в духе «теперь дорисуйте гребаную сову»
-
-aderyabin [3:33 PM]
-не-не. Фонтан платит как за сервис чтобы редакторы могли это делать. Там куча народу и все такое
-а я говорю про админку как часть гема
-
-progapandist [3:33 PM]
-Ну тогда это точно будет успех
-
-aderyabin [2:22 PM]
-Привет, помоги написать красиво блок в ридми локалера про интеграцию с CI.
-если есть время, конечно
-
-progapandist [2:23 PM]
-да, давай, есть уже какой-то текст? сделаю сегодня чуть позже
-
-aderyabin [2:37 PM]
-```## CI integration
-
-Localer loves CI and easy for integration with your favorite CI:
-# .travis.yml
-# other configuration options
-script:
-  - bundle exec bundle-audit
-  - bundle exec rubocop
-  - bundle exec rspec
-  - bundle exec localer
-or
-
-# Rakefile
-
-# other requirements
-require 'localer/rake_task'
-Localer::RakeTask.new(:localer)
-
-task(:default).clear
-task default: [:rubocop, :spec, localer]
-```
-(edited)
-
-
 ## CI integration
 
 Localer is easy to integrate into your favorite CI workflow:
