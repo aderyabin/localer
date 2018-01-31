@@ -51,6 +51,7 @@ or for specific Rails path:
 Localer is easy to integrate into your favorite CI workflow:
 ```yml
 # .travis.yml
+
 # other configuration options
 script:
   - bundle exec bundle-audit
