@@ -66,7 +66,7 @@ end
 
 Then /^the checker should create a json dump with:$/ do |file_content|
   file_name = 'tmp/aruba/output.json'
-  output = File.exists?(file_name) ? File.read(file_name) : ''
+  output = File.exist?(file_name) ? File.read(file_name) : ''
   expect(output).to eql(file_content)
 end
 
