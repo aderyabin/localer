@@ -28,6 +28,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "cucumber"
   spec.add_development_dependency "aruba"
 
-  spec.add_dependency "thor", "~> 0.20.0"
-  spec.add_dependency "dry-initializer", "~> 2.3.0"
+  spec.add_dependency "thor", ">= 0.19"
+  spec.add_dependency "dry-initializer", ">= 2.0"
 end
