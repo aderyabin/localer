@@ -179,7 +179,7 @@ PLATFORMS
 DEPENDENCIES
   appraisal
   aruba
-  bundler (~> 1.16)
+  bundler (~> 1.17)
   cucumber
   localer!
   rails (= 5.0.0)
