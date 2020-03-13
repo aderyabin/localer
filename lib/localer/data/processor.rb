@@ -18,7 +18,7 @@ module Localer # :nodoc:
         @data = Hash.new { |hsh, key| hsh[key] = {} }
         @locales = []
         translations.each do |(locale, translation)|
-          next unless config.locale[locale].enabled
+          next unless config.locale[locale.downcase].enabled
           @locales.push locale
           prepare(locale, translation)
         end
@@ -41,7 +41,7 @@ module Localer # :nodoc:
       end
 
       def exclude?(key, locale)
-        (config.exclude + config.locale[locale].exclude).any? do |pattern|
+        (config.exclude + config.locale[locale.downcase].exclude).any? do |pattern|
           match?(key, pattern)
         end
       end
