@@ -35,3 +35,14 @@ Scenario: Disable en.population
    | en.countries.france.population |
    | en.population.france |
 
+Scenario: With empty config file
+  Given a real locales
+  Given a config file with:
+  """
+  """
+  When I run checker
+  Then the checker should returns 4 missing translations:
+   | ru.population.italy |
+   | us.population.italy |
+   | en.countries.france.population |
+   | en.population.france |
