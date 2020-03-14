@@ -79,5 +79,9 @@ Then /^the checker should not found rails application$/ do
 end
 
 When /^I run checker$/ do
-  run("localer check ../../spec/dummy_app")
+  if defined?(run)
+    run("localer check ../../spec/dummy_app")
+  else
+    run_command("localer check ../../spec/dummy_app")
+  end
 end
