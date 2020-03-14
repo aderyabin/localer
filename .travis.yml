@@ -1,14 +1,20 @@
-sudo: false
-dist: trusty
 language: ruby
 
+sudo: false
+dist: trusty
+
+notifications:
+  email: false
+
 before_install:
-  - yes | gem update --system --force
   - gem install bundler:1.17.3
+
 rvm:
-  - 2.3.3
-  - 2.4.3
-  - 2.5.0
+  - 2.4
+  - 2.5
+  - 2.6
+  - 2.7
+
 gemfile:
   - gemfiles/rails50.gemfile
   - gemfiles/rails51.gemfile
