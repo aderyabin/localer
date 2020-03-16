@@ -19,6 +19,7 @@ module Localer # :nodoc:
         @locales = []
         translations.each do |(locale, translation)|
           next unless config.locale[locale.downcase].enabled
+
           @locales.push locale
           prepare(locale, translation)
         end
@@ -32,6 +33,7 @@ module Localer # :nodoc:
           translation.each do |(key, value)|
             full_key = prefix + ".#{key}"
             next if exclude?(full_key, locale)
+
             prepare(locale, value, full_key)
           end
         else

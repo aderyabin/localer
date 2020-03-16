@@ -12,6 +12,7 @@ module Localer
 
       def translations
         return {} unless connect!
+
         I18n.backend.send(:init_translations)
         I18n.backend.send(:translations)
       end

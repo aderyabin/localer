@@ -1,18 +1,17 @@
 AllCops:
   # Include gemspec and Rakefile
   Include:
-    - 'lib/**/*.rb'
-    - 'lib/**/*.rake'
-    - 'spec/**/*.rb'
+    - "lib/**/*.rb"
+    - "lib/**/*.rake"
+    - "spec/**/*.rb"
   Exclude:
-    - 'bin/**/*'
-    - 'lib/localer/ext/*.rb'
-    - 'Appraisals'
-    - 'Gemfile'
-    - 'Rakefile'
-    - '*.gemspec'
-    - 'gemfiles/vendor/**/*'
-    - 'vendor/**/*'
+    - "bin/**/*"
+    - "lib/localer/ext/*.rb"
+    - "Appraisals"
+    - "Gemfile"
+    - "Rakefile"
+    - "*.gemspec"
+    - "spec/dummy_app/"
   DisplayCopNames: true
   StyleGuideCopsOnly: false
   TargetRubyVersion: 2.4
@@ -28,17 +27,26 @@ Style/TrivialAccessors:
 
 Style/Documentation:
   Exclude:
-    - 'spec/**/*.rb'
+    - "spec/**/*.rb"
 
 Style/StringLiterals:
   Enabled: false
 
 Style/BlockDelimiters:
   Exclude:
-    - 'spec/**/*.rb'
+    - "spec/**/*.rb"
 
 Style/DoubleNegation:
   Enabled: false
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
 
 Layout/SpaceInsideStringInterpolation:
   EnforcedStyle: no_space
@@ -51,22 +59,16 @@ Lint/AmbiguousBlockAssociation:
 
 Metrics/MethodLength:
   Exclude:
-    - 'spec/**/*.rb'
+    - "spec/**/*.rb"
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
   Exclude:
-    - 'spec/**/*.rb'
+    - "spec/**/*.rb"
 
 Metrics/BlockLength:
   Exclude:
-    - 'spec/**/*.rb'
-
-Rails/Date:
-  Enabled: false
-
-Rails/TimeZone:
-  Enabled: false
+    - "spec/**/*.rb"
 
 Security/YAMLLoad:
   Enabled: false

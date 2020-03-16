@@ -30,6 +30,7 @@ module Localer # :nodoc:
         filename = File.expand_path(filename, path)
         return {} unless File.exist?(filename)
         return {} if File.zero?(filename)
+
         YAML
           .load_file(filename)
           .deep_downcase_keys
