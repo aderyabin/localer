@@ -1,9 +1,9 @@
 
-<p align="left">
+<p align="center">
 <img title="Localer logo" width="384" height="100" src="https://gist.githubusercontent.com/aderyabin/cb0512cbcd6cb4c79a4d84a4831109a5/raw/localer-logo.png">
 </p>
 
-[![Gem Version](https://badge.fury.io/rb/localer.svg)](https://rubygems.org/gems/localer) [![Build Status](https://travis-ci.org/aderyabin/localer.svg?branch=master)](https://travis-ci.org/aderyabin/localer) ![Dependency Status](https://gemnasium.com/badges/github.com/aderyabin/localer.svg)
+[![Gem Version](https://badge.fury.io/rb/localer.svg)](https://rubygems.org/gems/localer) [![Build Status](https://travis-ci.org/aderyabin/localer.svg?branch=master)](https://travis-ci.org/aderyabin/localer)
 
 Localer is a tool that automatically detects missing I18n translations.
 
@@ -11,13 +11,6 @@ The goal is to preserve the integrity of translations. Localer parses and merges
 
 <p align="left">
   <img height="500" src="https://gist.githubusercontent.com/aderyabin/cb0512cbcd6cb4c79a4d84a4831109a5/raw/localer2.png">
-</p>
-
-<p align="left">
-  <a href="https://evilmartians.com/?utm_source=localer">
-    <img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg"
-         alt="Sponsored by Evil Martians" width="236" height="54">
-  </a>
 </p>
 
 ## Installation
@@ -75,7 +68,9 @@ task default: [:rubocop, :spec, :localer]
 
 ## Support
 
-Localer supports Ruby 2.3+, Rails. 4.1+
+Localer supports
+* Ruby: 2.4, 2.5, 2.6, 2.7
+* Rails: 5.0, 5.1, 5.2, 6.0
 
 ## Configuration
 
@@ -140,6 +135,9 @@ After checking out the repo, run `bundle exec appraisal install` to install depe
 * [Thor](https://github.com/erikhuda/thor) - Used for building  command-line interfaces.
 * [Appraisal](https://github.com/thoughtbot/appraisal) -  Used for testing against different versions of dependencies
 * [Cucumber](https://github.com/cucumber/cucumber) + [Aruba](https://github.com/cucumber/aruba) - Used for testing command-line commands
+
+## Acknowledge
+Special thanks to [Roman Shamin](https://www.facebook.com/romanshamin) for the logo.
 
 ## Contributing
 
