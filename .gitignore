@@ -13,3 +13,4 @@ erl_crash.dump
 .vscode
 spec/dummy_app/log/
 vendor/
+.devcontainer/
