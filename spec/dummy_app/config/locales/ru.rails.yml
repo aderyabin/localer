@@ -72,6 +72,7 @@ ru:
       delimiter: " "
       precision: 3
       separator: ","
+      round_mode: default
       significant: false
       strip_insignificant_zeros: false
     percentage:

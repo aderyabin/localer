@@ -11,7 +11,7 @@ module Localer
   #   Localer::Rakeask.new
   # This will define a task named <tt>localer</tt> described as 'Run Localer'.
   class RakeTask < Rake::TaskLib
-    def initialize(name = :localer, *args)
+    def initialize(name = :localer, *args) # rubocop:disable Lint/MissingSuper
       @name = name
       desc 'Run Localer'
       task(name, *args) do |_, _task_args|

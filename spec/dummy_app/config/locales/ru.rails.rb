@@ -4,8 +4,8 @@
   ru: {
     number: {
       nth: {
-        ordinals: -> (_key, _options) {},
-        ordinalized: -> (_key, options) {}
+        ordinals: ->(_key, _options) {},
+        ordinalized: ->(_key, options) {}
       }
     }
   }
