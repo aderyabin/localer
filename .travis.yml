@@ -20,6 +20,7 @@ gemfile:
   - gemfiles/rails51.gemfile
   - gemfiles/rails52.gemfile
   - gemfiles/rails60.gemfile
+  - gemfiles/rails61.gemfile
 
 jobs:
   exclude:
