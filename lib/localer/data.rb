@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "data/service"
-require_relative "data/checker"
 require_relative "data/processor"
-require_relative "data/missing_translations"
 
 module Localer
   # Stores translations and provides
@@ -21,11 +19,18 @@ module Localer
     end
 
     def complete?
-      Checker.call(self)
+      each do |_locale, _key, value|
+        return false if value.nil?
+      end
+      true
     end
 
     def missing_translations
-      MissingTranslations.call(self)
+      missing = []
+      each do |locale, key, value|
+        missing.push("#{locale}#{key}") if value.nil?
+      end
+      missing
     end
 
     def each
