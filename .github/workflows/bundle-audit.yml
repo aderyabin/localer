@@ -1,0 +1,22 @@
+name: Bundle Audit
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  rubocop:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7
+    - name: Patch-level verification for Bundler
+      run: |
+        gem install bundle-audit
+        bundle-audit check --update

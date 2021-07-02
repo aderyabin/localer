@@ -13,8 +13,8 @@ AllCops:
     - "*.gemspec"
     - "spec/dummy_app/"
   DisplayCopNames: true
+  NewCops: enable
   StyleGuideCopsOnly: false
-  TargetRubyVersion: 2.4
 
 Naming/AccessorMethodName:
   Enabled: false
