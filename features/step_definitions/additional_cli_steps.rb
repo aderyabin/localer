@@ -64,6 +64,12 @@ Then /^the checker should fail$/ do
   step 'the exit status should be 1'
 end
 
+Then /^the checker should create a json dump with:$/ do |file_content|
+  file_name = 'tmp/aruba/output.json'
+  output = File.exist?(file_name) ? File.read(file_name) : ''
+  expect(output).to eql(file_content)
+end
+
 Then /^the checker should returns (.*) missing translations:$/ do |int, translations|
   step %{the output should contain "✖ Missing translations found (#{int})"}
   translations.raw.each do |tr|
@@ -84,4 +90,8 @@ When /^I run checker$/ do
   else
     run_command("localer check ../../spec/dummy_app")
   end
+end
+
+When /^I run checker with json$/ do
+  run("localer check ../../spec/dummy_app --json output.json")
 end

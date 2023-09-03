@@ -48,6 +48,19 @@ Scenario: Empty en locale
   When I run checker
   Then the checker should fail
 
+Scenario: Empty en locale creates a json dump
+  Given a "ru" locale file with:
+  """
+  ru:
+    one: один
+  """
+  When I run checker with json
+  Then the checker should fail
+  And the checker should create a json dump with:
+  """
+  ["en.one","us.one"]
+  """
+
 Scenario: Incorrect structure
   Given a "en" locale file with:
   """
